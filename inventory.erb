@@ -5,16 +5,16 @@ nfs
 etcd
 
 [masters]
-console.techdope.io openshift_schedulable=true
+console.educanube.com openshift_schedulable=true
 
 [nfs]
-console.techdope.io
+console.educanube.com
 
 [etcd]
-console.techdope.io
+console.educanube.com
 
 [nodes]
-console.techdope.io openshift_schedulable=true openshift_node_labels="{'region': 'infra', 'zone': 'default'}"
+console.educanube.com openshift_schedulable=true openshift_node_labels="{'region': 'infra', 'zone': 'default'}"
 
 [OSEv3:vars]
 ansible_user=openshift
@@ -46,7 +46,6 @@ openshift_hosted_etcd_storage_access_modes=["ReadWriteOnce"]
 openshift_hosted_etcd_storage_volume_size=1G
 openshift_hosted_etcd_storage_labels={'storage': 'etcd'}
 
-osm_use_cockpit=true
 
 openshift_metrics_install_metrics=True
 
@@ -55,8 +54,8 @@ openshift_logging_image_version=v3.7
 
 openshift_master_identity_providers=[{'name': 'htpasswd_auth', 'login': 'true', 'challenge': 'true', 'kind': 'HTPasswdPasswordIdentityProvider', 'filename': '/etc/origin/master/htpasswd'}]
 
-openshift_public_hostname=console.techdope.io
-openshift_master_default_subdomain=apps.techdope.io
+openshift_public_hostname=console.educanube.com
+openshift_master_default_subdomain=apps.educanube.com
 
-openshift_master_named_certificates=[{"certfile": "/etc/letsencrypt/live/console.techdope.io/cert.pem", "keyfile": "/etc/letsencrypt/live/console.techdope.io/privkey.pem", "cafile": "/etc/letsencrypt/live/console.techdope.io/fullchain.pem"}]
+openshift_master_named_certificates=[{"certfile": "/etc/letsencrypt/live/console.educanube.com/cert.pem", "keyfile": "/etc/letsencrypt/live/console.educanube.com/privkey.pem", "cafile": "/etc/letsencrypt/live/console.educanube.com/fullchain.pem"}]
 
