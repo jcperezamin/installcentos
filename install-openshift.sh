@@ -53,7 +53,8 @@ systemctl enable docker
 
 cd ~/workspace
 cat installcentos/inventory.erb | sed "s/educanube.com/${DOMAIN}/g" > /tmp/installcentos-inventory.erb
-ansible-playbook -i /tmp/installcentos-inventory.erb openshift-ansible/playbooks/byo/config.yml
+ansible-playbook -i /tmp/installcentos-inventory.erb openshift-ansible/playbooks/deploy_cluster.yml
+
 
 #################################################################
 ##            PLEASE CHOOSE BETTER CREDENTIALS
